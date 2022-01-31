@@ -1,0 +1,82 @@
+/* HOJA DE ESTILOS ***************************************************************************************/
+
+/*POR TIPO***********************************************************************************************/
+
+body {
+  background-color: #e5e5e5;
+  color: #0a3871;
+  text-align: center;
+}
+
+footer {
+  width: 85%;
+  text-align: right;
+}
+
+div {
+  width: 85%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+/* POR CLASE ***********************************************************************************************/
+
+.titulo {
+  padding: 15px;
+  width: 60vw;
+  margin: auto;
+}
+
+.btn {
+  border: 0;
+  color: white;
+  font-weight: bold;
+  background-color: blue;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 0.5em;
+}
+
+.btn:active {
+  transform: translateY(4px);
+}
+
+.text-input {
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 0.5em;
+  width: 30%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*POR ID*******************************************************************************************************************/
+
+#cantdeIntentosVerde {
+  color: greenyellow;
+  font-size: 45px;
+  background-color: white;
+}
+
+#cantdeIntentosRojo {
+  color: red;
+  font-size: 45px;
+  background-color: white;
+}
+#logo {
+  border-radius: 50%;
+  height: 105px;
+  width: auto;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+#section-juego {
+  margin: auto;
+  width: 85%;
+  margin-top: 1rem;
+}
