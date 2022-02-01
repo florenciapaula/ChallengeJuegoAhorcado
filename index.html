@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<!-- HEAD DE LA PAGINA -->
-
     <title>Juguemos a adivinar la palabra - ORACLE</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
@@ -39,30 +37,30 @@
 
     <form id="formulario" action="" onClick="evitarRecarga(event)" autocomplete="off">
 
-        
-        
-    
-
         <input maxlength="1" class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese una letra para arriesgar">
+
         <label>*solo mayusculas</label>
 
         <br><br>  
+
+<!--BOTONERA-->
 
         <input class="btn" type="submit" value="Elegir Palabra" id="btn-elegirPalabra" onClick="elegirPalabra();">
         <input class="btn" type="submit" value="Arriesgar Letra" id="btn-arriesgarLetra" onClick="compararLetra();">
         <input class="btn" type="submit" value="Jugar de nuevo" id="btn" onClick="jugardeNuevo();">
 
- <!-- CANVAS -->
-        <div>
-        <canvas width="500" height="350"></canvas>
-        </div>
-
-<!--Dashboard-->
+<!--DASHBOARD-->
 
         <h2 id="palabraSecreta" value="">Palabra Secreta:</h2>
         <h2 id="cantdeIntentos" value="">Intentos restantes:</h2>   
         <h2 id="letrasElegidas" value="">Letras elegidas:</h2>   
-        
+
+ <!-- CANVAS-->
+
+        <div>
+        <canvas width="500" height="350"></canvas>
+        </div>
+
     </form>
   </section> 
 
