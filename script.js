@@ -64,6 +64,10 @@ function elegirPalabra() {
   );
 
   document.getElementById("cantdeIntentos").textContent = intentos;
+
+  document.getElementById("letrasElegidas").textContent =
+  "Letras Elegidas:" + letrasElegidas;
+  
 }
 
 //VERIFICAR SI LA LETRA INGRESADA SE ENCUENTRA PRESENTE EN LA PALABRA SECRETA**********************************
@@ -222,7 +226,25 @@ function dibujar() {
 //Funcion para jugar de nuevo*************************************************************************
 
 function jugardeNuevo() {
-  location.reload();
+
+  if (intentos>0){
+
+    document.getElementById("cantdeIntentosVerde").id = "cantdeIntentos";
+
+
+  }else{
+    document.getElementById("cantdeIntentosRojo").id = "cantdeIntentos";
+
+  }
+  intentos=6;
+
+
+  document.getElementById("input-texto").disabled = false;
+  letrasElegidas="";
+  elegirPalabra();
+
+
+
 }
 
 // EVITAR RECARGA DE FORMULARIO*********************************************************************

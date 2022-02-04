@@ -78,7 +78,7 @@
   }
 
   #section-juego {
-    background-color: #2f737c8a;
+    background-color: #5bd5e6b0;
     font-size: 14px;
     margin: auto;
     width: 95%;
@@ -87,7 +87,8 @@
 
   canvas {
     display: block;
-    width: 100%;
+    margin: auto;
+    width: 50%;
     height: auto;
   }
 }
@@ -113,7 +114,7 @@
   }
 
   div {
-    background-color: #2f737c8a;
+    background-color: #5bd5e6b0;
     width: 95%;
     margin: auto;
     margin-top: 0.5rem;
@@ -168,7 +169,7 @@
   }
 
   #section-juego {
-    background-color: #2f737c8a;
+    background-color: #5bd5e6b0;
     font-size: 16px;
     margin: auto;
     width: 95%;
@@ -205,7 +206,7 @@
   }
 
   div {
-    background-color: #2f737c8a;
+    background-color: #5bd5e6b0;
     width: 95%;
     margin: auto;
     margin-top: 0.5rem;
@@ -260,7 +261,7 @@
   }
 
   #section-juego {
-    background-color: #2f737c8a;
+    background-color: #5bd5e6b0;
     font-size: 18px;
     margin: auto;
     width: 95%;
@@ -297,7 +298,7 @@
   }
 
   div {
-    background-color: #2f737c8a;
+    background-color: #5bd5e6b0;
     width: 95%;
     margin: auto;
     margin-top: 0.5rem;
@@ -352,7 +353,7 @@
   }
 
   #section-juego {
-    background-color: #2f737c8a;
+    background-color: #5bd5e6b0;
     font-size: 20px;
     margin: auto;
     width: 95%;
@@ -389,7 +390,7 @@
   }
 
   div {
-    background-color: #2f737c8a;
+    background-color: #5bd5e6b0;
     width: 95%;
     margin: auto;
     margin-top: 0.5rem;
@@ -398,7 +399,7 @@
   /* POR CLASE ***********************************************************************************************/
 
   .titulo {
-    font-size: 26px;
+    font-size: 30px;
     padding: 10px;
     width: 80vw;
     margin: auto;
@@ -444,8 +445,7 @@
   }
 
   #section-juego {
-    background-color: #2f737c8a;
-    font-size: 22px;
+    background-color: #5bd5e6b0;
     margin: auto;
     width: 95%;
     margin-top: 0.5rem;
