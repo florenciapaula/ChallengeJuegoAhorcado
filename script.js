@@ -2,7 +2,7 @@
 
 var palabraSecreta;
 var palabraPantalla;
-var letrasElegidas="";
+var letrasElegidas = "";
 
 var arrayPalabraSecreta;
 var arrayPalabraPantalla;
@@ -11,10 +11,8 @@ var cantdeLetras;
 var letra;
 var intentos = 6;
 
-var valido=false;
-
 var indice;
-var indiceDiccionario=9;
+var indiceDiccionario = 9;
 var arrayDiccionario = [
   "FUNCION",
   "METODO",
@@ -29,34 +27,30 @@ var arrayDiccionario = [
 ];
 
 // AGREGAR PALABRA AL ARRAY DICCIONARIO*********************************************************************
-
 eventTarget.addEventListener("keydown", compararLetra(logKey));
 
-function agregarPalabra(){
+function agregarPalabra() {
+  nuevaPalabra = document.getElementById("input-nueva-palabra").value;
 
-  nuevaPalabra= document.getElementById("input-nueva-palabra").value;
+  if (/[A-Z]/.test(nuevaPalabra)) {
+    arrayDiccionario.push(nuevaPalabra);
+    indiceDiccionario = indiceDiccionario + 1;
 
-  if(/[A-Z]/.test(nuevaPalabra)){
-
-      arrayDiccionario.push(nuevaPalabra);
-      indiceDiccionario=indiceDiccionario+1;
-      alert("La palabra fue agregada correctamente");
-      document.getElementById("input-nueva-palabra").value="";
-
-  } else{
-
-  alert("Solo se permiten letras mayusculas");
-  document.getElementById("input-nueva-palabra")="";
-
-        }
+    document.getElementById("input-nueva-palabra").value = "";
+    document.getElementById("input-nueva-palabra").placeholder =
+      "La palabra fue agregada correctamente";
+  } else {
+    document.getElementById("input-nueva-palabra").value = "";
+    document.getElementById("input-nueva-palabra").placeholder =
+      "Solo se permiten letras mayusculas";
   }
+}
 
 //SELECCIONAR PALABRA SECRETA DEL ARRAY DICCIONARIO************************************************
 
 function elegirPalabra() {
-
   (indice = Math.round(Math.random() * indiceDiccionario)), 0;
-  console.log(indice);
+
   palabraSecreta = arrayDiccionario[indice];
 
   cantdeLetras = palabraSecreta.length;
@@ -65,141 +59,86 @@ function elegirPalabra() {
   palabraPantalla = "_".repeat(cantdeLetras);
   arrayPalabraPantalla = Array.from(palabraPantalla);
 
-  document.getElementById("palabraSecreta").textContent =
-    "Palabra Secreta: " + " _ ".repeat(cantdeLetras);
+  document.getElementById("palabraSecreta").textContent = " _ ".repeat(
+    cantdeLetras
+  );
 
-  document.getElementById("cantdeIntentos").textContent =
-    "Intentos restantes: " + intentos;
-  
-  var button = document.getElementById("btn-elegirPalabra");
-  button.disabled = true;
-
+  document.getElementById("cantdeIntentos").textContent = intentos;
 }
-
-
-//VERIFICAR SI LA LETRA INGRESADA es mayuscula*********************************************************************************
-
-function verificarMayuscula(){
-
-	letra = document.getElementById("input-texto").value;
-
-	 	if((/[A-Z]/.test(letra))){
-		   
-		  valido=true;		
-
-		} else{
-			valido=false;		
-
-		}}
 
 //VERIFICAR SI LA LETRA INGRESADA SE ENCUENTRA PRESENTE EN LA PALABRA SECRETA**********************************
 
 function compararLetra() {
+  letra = document.getElementById("input-texto").value;
 
-  	letra = document.getElementById("input-texto").value;
-	
+  if (/[A-Z]/.test(letra)) {
+    if (palabraSecreta.includes(letra)) {
+      for (i = 0; i < cantdeLetras; i++) {
+        if (arrayPalabraSecreta[i] == letra) {
+          arrayPalabraPantalla[i] = letra;
 
-	verificarMayuscula();
+          document.getElementById("palabraSecreta").textContent =
+            arrayPalabraPantalla.join(" ");
 
-      
-     if(valido==true){
+          palabraPantalla = arrayPalabraPantalla.join("");
 
-	recorrerArray();
+          document.getElementById("input-texto").value = "";
+          document.getElementById("input-texto").placeholder =
+            "Escriba otra letra";
 
-
-        } else{
-          
-          alert("Ingrese solo mayusculas");
-          document.getElementById("input-texto").value="";
-        }
-    }
-
-
-//RECORRER EL ARRAY COMPARANDO Y REEMPLAZANDO*******************************************************
-
-function recorrerArray(){
-
-      if (palabraSecreta.includes(letra)) {
-        
-          for (i = 0; i < cantdeLetras; i++) {
-        
-            if (arrayPalabraSecreta[i] == letra) {
-              
-              arrayPalabraPantalla[i] = letra;
-
-              document.getElementById("palabraSecreta").textContent =
-              "Palabra Secreta: " + arrayPalabraPantalla.join(" ");
-
-              palabraPantalla = arrayPalabraPantalla.join("");
-
-              document.getElementById("input-texto").value = "";
-
-        if (palabraPantalla == palabraSecreta) {
-
-              document.getElementById("palabraSecreta").textContent =
-                "Palabra Secreta: " + palabraSecreta;
-
-              document.getElementById("cantdeIntentos").textContent =
-                "Ganaste, Felicidades!";
-              
-              document.getElementById("cantdeIntentos").id =
-                "cantdeIntentosVerde";
-
-              var button = document.getElementById("btn-arriesgarLetra");
-              button.disabled = true;
-            }
-          }
-        }
-      } else {
-
-          if (!letrasElegidas.includes(letra)){
-
-            letrasElegidas = letrasElegidas + letra;
-            document.getElementById("letrasElegidas").textContent = "Letras Elegidas: " + letrasElegidas;
-
-            intentos = intentos - 1;
-            console.log(intentos);
+          if (palabraPantalla == palabraSecreta) {
+            document.getElementById("palabraSecreta").textContent =
+              palabraSecreta;
 
             document.getElementById("cantdeIntentos").textContent =
-              "Intentos restantes: " + intentos;
-            
-            document.getElementById("input-texto").value="";
-            
-            dibujar();
+              "Usted adivino la palabra";
 
-        } else{
-
-            alert("Esa letra ya fue elegida");
-
-            document.getElementById("input-texto").value="";
+            document.getElementById("cantdeIntentos").id =
+              "cantdeIntentosVerde";
+            document.getElementById("restantes").textContent = "";
+            document.getElementById("input-texto").value = "";
+            document.getElementById("input-texto").placeholder =
+              "Fin del juego";
+            document.getElementById("input-texto").disabled = true;
           }
         }
-	}
+      }
+    } else {
+      if (!letrasElegidas.includes(letra)) {
+        letrasElegidas = letrasElegidas + letra;
+        document.getElementById("letrasElegidas").textContent =
+          "Letras Elegidas:" + letrasElegidas;
 
+        intentos = intentos - 1;
+        console.log(intentos);
 
-//Funcion para jugar de nuevo*************************************************************************
+        document.getElementById("cantdeIntentos").textContent = intentos;
 
-function jugardeNuevo() {
-  location.reload();
-}
+        document.getElementById("input-texto").value = "";
 
-// EVITAR RECARGA DE FORMULARIO*********************************************************************
-
-function evitarRecarga(event) {
-  event.preventDefault();
-  return false;
+        dibujar();
+      } else {
+        document.getElementById("input-texto").value = "";
+        document.getElementById("input-texto").placeholder =
+          "Esa letra ya fue elegida";
+      }
+    }
+  } else {
+    document.getElementById("input-texto").value = "";
+    document.getElementById("input-texto").placeholder =
+      "Ingrese solo mayusculas";
+  }
 }
 
 //Funcion para dibujar ahorcado***********************************************************************
 
 function dibujar() {
-
   var pantalla = document.querySelector("canvas");
   var dibujo = pantalla.getContext("2d");
 
   if (intentos == 6) {
     dibujo.beginPath();
-    dibujo.moveTo (150, 100);
+    dibujo.moveTo(150, 100);
     dibujo.lineTo(150, 50);
     dibujo.lineTo(300, 50);
     dibujo.lineTo(300, 300);
@@ -267,11 +206,28 @@ function dibujar() {
     dibujo.closePath();
 
     document.getElementById("palabraSecreta").textContent =
-      "Palabra Secreta: " + palabraSecreta;
-    document.getElementById("cantdeIntentos").textContent = "Fin del juego";
+      palabraSecreta;
+    document.getElementById("cantdeIntentos").textContent = "Fin del Juego";
     document.getElementById("cantdeIntentos").id = "cantdeIntentosRojo";
 
-    var button = document.getElementById("btn-arriesgarLetra");
-    button.disabled = true;
+    document.getElementById("restantes").textContent = "";
+
+    document.getElementById("input-texto").value = "";
+    document.getElementById("input-texto").placeholder = "Fin del juego";
+
+    document.getElementById("input-texto").disabled = true;
   }
+}
+
+//Funcion para jugar de nuevo*************************************************************************
+
+function jugardeNuevo() {
+  location.reload();
+}
+
+// EVITAR RECARGA DE FORMULARIO*********************************************************************
+
+function evitarRecarga(event) {
+  event.preventDefault();
+  return false;
 }

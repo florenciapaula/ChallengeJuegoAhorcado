@@ -1,92 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- HEAD DE LA PAGINA -->
+  <!-- HEAD DE LA PAGINA -->
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap"
+      rel="stylesheet"
+    />
 
-    <title>Juguemos a adivinar la palabra - ORACLE</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <!-- HEAD DE LA PAGINA -->
 
+    <title>Juguemos con ORACLE</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-<!-- BODY DE LA PAGINA -->
+  <!-- BODY DE LA PAGINA -->
 
   <body>
-
-<!-- TITULO -->
+    <!-- TITULO -->
 
     <div>
-      <img id="logo" src="images/logo.png"/>
-      <h1 class="titulo">Juguemos a adivinar la palabra secreta con Oracle</h1>
-      <button class="btn" id="iniciar-juego" onclick="location.href='#section-juego';">Iniciar Juego</button>
+
+      <h1 class="titulo">Juguemos a<br>adivinar la palabra secreta<br>con Oracle</h1>
+      <button
+        class="btn"
+        id="iniciar-juego"
+        onclick="location.href='#section-juego';"
+      >
+        Iniciar Juego
+      </button>
     </div>
 
     <div>
-      <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra">
-      <button class="btn" id="nueva-palabra" onclick="agregarPalabra();">Agregar Palabra</button> 
+      <input
+        class="text-input"
+        type="text"
+        id="input-nueva-palabra"
+        placeholder="Escriba una nueva palabra"
+      />
+      <button class="btn" id="nueva-palabra" onclick="agregarPalabra();">
+        Agregar Palabra
+      </button>
     </div>
 
-  <!-- SECCION IZQUIERDA -->
+    <!-- SECCION IZQUIERDA -->
 
-  <section id="section-juego">
-
-    <form id="formulario" action="" onClick="evitarRecarga(event)" autocomplete="off">
-
-        <input maxlength="1" class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese una letra para arriesgar">
+    <section id="section-juego">
+      <form
+        id="formulario"
+        action=""
+        onClick="evitarRecarga(event)"
+        autocomplete="off"
+      >
+        <input maxlength="1" class="text-input" type="text" name="input-texto"
+        id="input-texto" placeholder="Escriba una letra"
+        onKeyUp="compararLetra();"">
 
         <label>*solo mayusculas</label>
-
-        <br><br>  
-
-<!--BOTONERA-->
-
-        <input class="btn" type="submit" value="Elegir Palabra" id="btn-elegirPalabra" onClick="elegirPalabra();">
-        <input class="btn" type="submit" value="Arriesgar Letra" id="btn-arriesgarLetra" onClick="compararLetra();">
-        <input class="btn" type="submit" value="Jugar de nuevo" id="btn" onClick="jugardeNuevo();">
-
-<section id="panel">
-<!--DASHBOARD-->
-<div id="dash">
-        <h2 id="palabraSecreta" value="">Palabra Secreta:</h2>
-        <h2 id="cantdeIntentos" value="">Intentos restantes:</h2>   
-        <h2 id="letrasElegidas" value="">Letras elegidas:</h2>   
-</div>
-<div id="canvas">
- <!-- CANVAS-->
-
-        <canvas width="500" height="350"></canvas>
-</div>
-</section>
+        <br>
 
 
+        <input
+          class="btn"
+          type="submit"
+          value="Jugar de nuevo"
+          id="btn"
+          onClick="jugardeNuevo();"
+        />
 
+        <!-- CANVAS -->
+        <div id="canvas">
+          <canvas width="500" height="350"></canvas>
+        </div>
 
+        <!--Dashboard-->
+        <h2 value="">Palabra Secreta:</h2>
+        <h2 id="palabraSecreta" value=""></h2>
+        <h2 id="restantes" value="">Intentos restantes:</h2>
+        <h2 id="cantdeIntentos" value=""></h2>
+        <h2 id="letrasElegidas" value="">Letras elegidas:</h2>
+      </form>
+    </section>
 
+    <!--RODAPIE-->
 
+    <footer>
+      <p>
+        desarrollado por Florencia Martinez<br />
+        <a href="mailto:florenciapaulamartinez@gmail.com">contact me</a>
+      </p>
+    </footer>
 
+    <!--JAVASCRIPT-->
 
-
-    </form>
-  </section> 
-
-<!--RODAPIE-->
-
-  <footer>   
-      <br><br>
-      <p>desarrollado por Florencia Martinez<br>
-      <a href="mailto:florenciapaulamartinez@gmail.com">contact me</a></p>
-  </footer>
-
-<!--JAVASCRIPT-->
-
-  <script src="script.js"></script>
-  <script>dibujar();</script>
-
-    
+    <script src="script.js"></script>
+    <script>
+      elegirPalabra();
+    </script>
+    <script>
+      dibujar();
+    </script>
   </body>
 </html>

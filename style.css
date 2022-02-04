@@ -1,182 +1,460 @@
-/* HOJA DE ESTILOS ***************************************************************************************/
+/* HOJA DE ESTILO*******************************************************************/
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  /*POR TIPO***********************************************************************************************/
+  * {
+    font-family: "Short Stack", cursive;
+  }
+  body {
+    background-image: url(images/fondo.JPG);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 
-#panel{
-border-style:solid;
-border-color:black;
-margin:auto;
-widht:80%;
-display:grid;
-grid-template-columns: 100%;
+  footer {
+    width: 95%;
+    margin: auto;
+    font-size: 9px;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
 
+  div {
+    background-color: #2f737c8a;
+    width: 95%;
+    margin: auto;
+    margin-top: 0.5rem;
+  }
+
+  /* POR CLASE ***********************************************************************************************/
+
+  .titulo {
+    font-size: 19px;
+    padding: 10px;
+    width: 80vw;
+    margin: auto;
+  }
+
+  .btn {
+    border: 0;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5em;
+  }
+
+  .btn:active {
+    transform: translateY(4px);
+  }
+
+  .text-input {
+    font-size: 12px;
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 0.5em;
+    width: 60%;
+    height: 25px;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*POR ID*******************************************************************************************************************/
+
+  #cantdeIntentosVerde {
+    color: greenyellow;
+    font-size: 25px;
+  }
+
+  #cantdeIntentosRojo {
+    color: red;
+    font-size: 25px;
+  }
+
+  #section-juego {
+    background-color: #2f737c8a;
+    font-size: 14px;
+    margin: auto;
+    width: 95%;
+    margin-top: 0.5rem;
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
-
-#dash{
-margin:auto;
-}
-
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  /*POR TIPO***********************************************************************************************/
+  * {
+    font-family: "Short Stack", cursive;
+  }
+  body {
+    background-image: url(images/fondo.JPG);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 
-#panel{
-border-style:solid;
-border-color:black;
-margin:auto;
-widht:80%;
-display:grid;
-grid-template-columns: 100%;
+  footer {
+    width: 95%;
+    margin: auto;
+    font-size: 9px;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
 
-}
+  div {
+    background-color: #2f737c8a;
+    width: 95%;
+    margin: auto;
+    margin-top: 0.5rem;
+  }
 
+  /* POR CLASE ***********************************************************************************************/
 
-#dash{
-margin:auto;
-}
+  .titulo {
+    font-size: 20px;
+    padding: 10px;
+    width: 80vw;
+    margin: auto;
+  }
 
+  .btn {
+    border: 0;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5em;
+  }
+
+  .btn:active {
+    transform: translateY(4px);
+  }
+
+  .text-input {
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 0.5em;
+    width: 45%;
+    height: 25px;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*POR ID*******************************************************************************************************************/
+
+  #cantdeIntentosVerde {
+    color: greenyellow;
+    font-size: 28px;
+  }
+
+  #cantdeIntentosRojo {
+    color: red;
+    font-size: 28px;
+  }
+
+  #section-juego {
+    background-color: #2f737c8a;
+    font-size: 16px;
+    margin: auto;
+    width: 95%;
+    margin-top: 0.5rem;
+  }
+
+  canvas {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  /*POR TIPO***********************************************************************************************/
+  * {
+    font-family: "Short Stack", cursive;
+  }
+  body {
+    background-image: url(images/fondo.JPG);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 
-#panel{
-border-style:solid;
-border-color:black;
-margin:auto;
-widht:80%;
-display:grid;
-grid-template-columns:40% 50%;
+  footer {
+    width: 95%;
+    margin: auto;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
 
-}
+  div {
+    background-color: #2f737c8a;
+    width: 95%;
+    margin: auto;
+    margin-top: 0.5rem;
+  }
 
+  /* POR CLASE ***********************************************************************************************/
 
-#dash{
-margin:auto;
-margin-right:1px;
-}
+  .titulo {
+    font-size: 22px;
+    padding: 10px;
+    width: 80vw;
+    margin: auto;
+  }
+
+  .btn {
+    border: 0;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5em;
+  }
+
+  .btn:active {
+    transform: translateY(4px);
+  }
+
+  .text-input {
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 0.5em;
+    width: 45%;
+    height: 25px;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*POR ID*******************************************************************************************************************/
+
+  #cantdeIntentosVerde {
+    color: greenyellow;
+    font-size: 35px;
+  }
+
+  #cantdeIntentosRojo {
+    color: red;
+    font-size: 35px;
+  }
+
+  #section-juego {
+    background-color: #2f737c8a;
+    font-size: 18px;
+    margin: auto;
+    width: 95%;
+    margin-top: 0.5rem;
+  }
+
+  canvas {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  /*POR TIPO***********************************************************************************************/
+  * {
+    font-family: "Short Stack", cursive;
+  }
+  body {
+    background-image: url(images/fondo.JPG);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 
-#panel{
-border-style:solid;
-border-color:black;
-margin:auto;
-widht:80%;
-display:grid;
-grid-template-columns:40% 50%;
+  footer {
+    width: 95%;
+    margin: auto;
+    font-size: 9px;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
 
-}
+  div {
+    background-color: #2f737c8a;
+    width: 95%;
+    margin: auto;
+    margin-top: 0.5rem;
+  }
 
-#dash{
-margin:auto;
-margin-right:1px;
-}
+  /* POR CLASE ***********************************************************************************************/
+
+  .titulo {
+    font-size: 24px;
+    padding: 10px;
+    width: 80vw;
+    margin: auto;
+  }
+
+  .btn {
+    border: 0;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5em;
+  }
+
+  .btn:active {
+    transform: translateY(4px);
+  }
+
+  .text-input {
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 0.5em;
+    width: 45%;
+    height: 25px;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*POR ID*******************************************************************************************************************/
+
+  #cantdeIntentosVerde {
+    color: greenyellow;
+    font-size: 35px;
+  }
+
+  #cantdeIntentosRojo {
+    color: red;
+    font-size: 35px;
+  }
+
+  #section-juego {
+    background-color: #2f737c8a;
+    font-size: 20px;
+    margin: auto;
+    width: 95%;
+    margin-top: 0.5rem;
+  }
+
+  canvas {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-	
-#panel{
-border-style:solid;
-border-color:black;
-margin:auto;
-widht:80%;
-display:grid;
-grid-template-columns:40% 50%;
+  /*POR TIPO***********************************************************************************************/
+  * {
+    font-family: "Short Stack", cursive;
+  }
+  body {
+    background-image: url(images/fondo.JPG);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 
-}
+  footer {
+    width: 95%;
+    margin: auto;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
 
-#dash{
-margin:auto;
-margin-right:1px;
-}
-}
+  div {
+    background-color: #2f737c8a;
+    width: 95%;
+    margin: auto;
+    margin-top: 0.5rem;
+  }
 
+  /* POR CLASE ***********************************************************************************************/
 
-/*POR TIPO***********************************************************************************************/
+  .titulo {
+    font-size: 26px;
+    padding: 10px;
+    width: 80vw;
+    margin: auto;
+  }
 
-body {
-  background-color: #e5e5e5;
-  color: #0a3871;
-  text-align: center;
-  margin:auto;
-}
+  .btn {
+    border: 0;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 0.5em;
+  }
 
-footer {
-  width: 85%;
-  text-align: right;
-}
+  .btn:active {
+    transform: translateY(4px);
+  }
 
-div {
+  .text-input {
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 0.5em;
+    width: 45%;
+    height: 25px;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  width: 100%;
-  margin:auto;  
-  margin-top: 1rem;
-}
+  /*POR ID*******************************************************************************************************************/
 
-/* POR CLASE ***********************************************************************************************/
+  #cantdeIntentosVerde {
+    color: greenyellow;
+    font-size: 40px;
+  }
 
-.titulo {
-  padding: 15px;
-  width: 60vw;
-  margin: auto;
-}
+  #cantdeIntentosRojo {
+    color: red;
+    font-size: 40px;
+  }
 
-.btn {
-  border: 0;
-  color: white;
-  font-weight: bold;
-  background-color: blue;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 0.5em;
-}
+  #section-juego {
+    background-color: #2f737c8a;
+    font-size: 22px;
+    margin: auto;
+    width: 95%;
+    margin-top: 0.5rem;
+  }
 
-.btn:active {
-  transform: translateY(4px);
-}
-
-.text-input {
-  border-radius: 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  display: block;
-  padding: 0.5em;
-  width: 30%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*POR ID*******************************************************************************************************************/
-
-#cantdeIntentosVerde {
-  color: green;
-  font-size: 45px;
-  
-}
-
-#cantdeIntentosRojo {
-  color: red;
-  font-size: 45px;
-  
-}
-#logo {
-  border-radius: 50%;
-  height: 105px;
-  width: auto;
-  display: block;
-  margin: auto;
-  margin-bottom: 1rem;
-}
-
-#section-juego {
-  margin: auto;
-  width: 85%;
-  margin-top: 1rem;
+  canvas {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+  }
 }
