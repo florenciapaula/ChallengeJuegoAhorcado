@@ -67,6 +67,8 @@ function elegirPalabra() {
 
   document.getElementById("letrasElegidas").textContent =
   "Letras Elegidas:" + letrasElegidas;
+
+  document.getElementById("btn").disabled = true;
   
 }
 
@@ -104,6 +106,7 @@ function compararLetra() {
             document.getElementById("input-texto").placeholder =
               "Fin del juego";
             document.getElementById("input-texto").disabled = true;
+            document.getElementById("btn").disabled = false;
           }
         }
       }
@@ -141,6 +144,7 @@ function dibujar() {
   var dibujo = pantalla.getContext("2d");
 
   if (intentos == 6) {
+    dibujo.clearRect(0, 0, 500, 300); 
     dibujo.beginPath();
     dibujo.moveTo(150, 100);
     dibujo.lineTo(150, 50);
@@ -220,6 +224,7 @@ function dibujar() {
     document.getElementById("input-texto").placeholder = "Fin del juego";
 
     document.getElementById("input-texto").disabled = true;
+    document.getElementById("btn").disabled = false;
   }
 }
 
@@ -227,7 +232,7 @@ function dibujar() {
 
 function jugardeNuevo() {
 
-  if (intentos>0){
+  if (intentos>0){    
 
     document.getElementById("cantdeIntentosVerde").id = "cantdeIntentos";
 
@@ -236,14 +241,15 @@ function jugardeNuevo() {
     document.getElementById("cantdeIntentosRojo").id = "cantdeIntentos";
 
   }
-  intentos=6;
 
+  intentos=6;
+  dibujar();
 
   document.getElementById("input-texto").disabled = false;
+
   letrasElegidas="";
+
   elegirPalabra();
-
-
 
 }
 
