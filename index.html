@@ -26,8 +26,9 @@
     <!-- TITULO -->
 
     <div>
-
-      <h1 class="titulo">Juguemos a<br>adivinar la palabra secreta<br>con Oracle</h1>
+      <h1 class="titulo">
+        Juguemos a<br />adivinar la palabra secreta<br />con Oracle
+      </h1>
       <button
         class="btn"
         id="iniciar-juego"
@@ -39,6 +40,7 @@
 
     <div>
       <input
+        maxlength="8"
         class="text-input"
         type="text"
         id="input-nueva-palabra"
@@ -58,13 +60,18 @@
         onClick="evitarRecarga(event)"
         autocomplete="off"
       >
-        <input maxlength="1" class="text-input" type="text" name="input-texto"
-        id="input-texto" placeholder="Escriba una letra"
-        onKeyUp="compararLetra();">
+        <input
+          maxlength="1"
+          class="text-input"
+          type="text"
+          name="input-texto"
+          id="input-texto"
+          placeholder="Escriba una letra"
+          onKeyUp="compararLetra();"
+        />
 
         <label>*solo mayusculas</label>
-        <br>
-
+        <br />
 
         <input
           class="btn"
@@ -100,6 +107,7 @@
     <!--JAVASCRIPT-->
 
     <script src="script.js"></script>
+    <script src="canvas.js"></script>
     <script>
       elegirPalabra();
     </script>
